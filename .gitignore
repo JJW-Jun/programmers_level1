@@ -1,0 +1,16 @@
+# Folder
+.idea
+
+# Class
+src/main/java/com/example/simplesearch/service/NaverShopSearch.java
+
+
+
+# Setting
+settings.gradle
+*.yml
+gradlew
+gradlew.bat
+
+# Others
+SimpleSearch.iml
