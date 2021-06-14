@@ -4,8 +4,6 @@
 # Class
 src/main/java/com/example/simplesearch/service/NaverShopSearch.java
 
-
-
 # Setting
 settings.gradle
 *.yml

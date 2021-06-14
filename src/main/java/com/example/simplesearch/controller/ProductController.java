@@ -11,11 +11,12 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/api")
 public class ProductController {
     private final ProductService productService;
 
 
-    @GetMapping("/api/products")
+    @GetMapping("/products")
     public List<Product> readProducts() {
         System.out.println("================================");
         System.out.println("==============Read==============");
@@ -23,7 +24,7 @@ public class ProductController {
         return productService.findAll();
     }
 
-    @PostMapping("/api/products")
+    @PostMapping("/products")
     public Product addProduct(@RequestBody ProductRequestDto requestDto) {
         System.out.println("================================");
         System.out.println("==============A D D==============");
@@ -32,7 +33,7 @@ public class ProductController {
         return product;
     }
 
-    @PutMapping("/api/products/{id}")
+    @PutMapping("/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMyPriceRequestDto requestDto) {
         System.out.println("================================");
         System.out.println("=============UPDATE=============");
@@ -40,7 +41,7 @@ public class ProductController {
         return productService.update(id, requestDto);
     }
 
-    @DeleteMapping("/api/products/{id}")
+    @DeleteMapping("/products/{id}")
     public Long deleteProduct(@PathVariable Long id, @RequestBody ProductRequestDto requestDto) {
         System.out.println("================================");
         System.out.println("==============Delete=============");
